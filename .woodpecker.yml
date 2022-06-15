@@ -3,6 +3,7 @@ pipeline:
     when:
       event:
       - push
+    image: node:16
     commands:
     - yarn
     - yarn lint
