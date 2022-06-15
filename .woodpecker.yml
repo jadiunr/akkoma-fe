@@ -15,6 +15,7 @@ pipeline:
       - push
     image: node:16
     commands:
+    - apt update
     - apt install firefox-esr -y --no-install-recommends
     - yarn 
     - yarn unit
