@@ -39,7 +39,7 @@ pipeline:
     - SCW_SECRET_KEY
     - SCW_DEFAULT_ORGANIZATION_ID
     commands:
-      - apt-get install -y rclone wget zip
+      - apt-get update && apt-get install -y rclone wget zip
       - wget https://github.com/scaleway/scaleway-cli/releases/download/v2.5.1/scaleway-cli_2.5.1_linux_amd64
       - mv scaleway-cli_2.5.1_linux_amd64 scaleway-cli
       - chmod +x scaleway-cli
