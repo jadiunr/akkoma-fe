@@ -1,0 +1,133 @@
+{
+  "approval_required": false,
+  "avatar_upload_limit": 2000000,
+  "background_image": "/images/city.jpg",
+  "background_upload_limit": 4000000,
+  "banner_upload_limit": 4000000,
+  "description": "A Test Instace",
+  "description_limit": 5000,
+  "email": "somewhere@example.com",
+  "languages": [
+    "en",
+    "ja"
+  ],
+  "max_toot_chars": 5000,
+  "pleroma": {
+    "metadata": {
+      "account_activation_required": false,
+      "features": [
+        "pleroma_api",
+        "akkoma_api",
+        "mastodon_api",
+        "mastodon_api_streaming",
+        "polls",
+        "v2_suggestions",
+        "pleroma_explicit_addressing",
+        "shareable_emoji_packs",
+        "multifetch",
+        "pleroma:api/v1/notifications:include_types_filter",
+        "editing",
+        "media_proxy",
+        "pleroma_emoji_reactions",
+        "exposable_reactions",
+        "profile_directory",
+        "akkoma:machine_translation",
+        "custom_emoji_reactions",
+        "pleroma:get:main/ostatus"
+      ],
+      "federation": {
+        "enabled": true,
+        "exclusions": true,
+        "mrf_hashtag": {
+          "federated_timeline_removal": [],
+          "reject": [],
+          "sensitive": [
+            "nsfw"
+          ]
+        },
+        "mrf_hellthread": {
+          "delist_threshold": 5,
+          "reject_threshold": 10
+        },
+        "mrf_keyword": {
+          "federated_timeline_removal": [],
+          "reject": [
+            "rejectme"
+          ],
+          "replace": []
+        },
+        "mrf_policies": [
+          "SimplePolicy",
+          "HellthreadPolicy",
+          "KeywordPolicy",
+          "TagPolicy",
+          "InlineQuotePolicy",
+          "HashtagPolicy"
+        ],
+        "mrf_simple": {
+          "accept": [],
+          "avatar_removal": [],
+          "banner_removal": [],
+          "federated_timeline_removal": [],
+          "followers_only": [],
+          "media_nsfw": [],
+          "media_removal": [],
+          "reject": [
+            "badinstance.com"
+          ],
+          "reject_deletes": [],
+          "report_removal": []
+        },
+        "mrf_simple_info": {
+          "reject": {
+            "badinstance.com": {
+              "reason": "This instance is bad"
+            }
+          }
+        },
+        "quarantined_instances": [],
+        "quarantined_instances_info": {
+          "quarantined_instances": {}
+        }
+      },
+      "fields_limits": {
+        "max_fields": 10,
+        "max_remote_fields": 20,
+        "name_length": 512,
+        "value_length": 2048
+      },
+      "post_formats": [
+        "text/plain",
+        "text/html",
+        "text/markdown",
+        "text/bbcode",
+        "text/x.misskeymarkdown"
+      ],
+      "privileged_staff": false
+    },
+    "stats": {
+      "mau": 27
+    },
+    "vapid_public_key": "BDgd8xcYuskwMLnr-3Gi-xOU_Jz9IOxhHIW0VWgBMM47wB8qfC_Hw26eNd3sGDSEoXk06ZY-L5qKHqLLNzZSdnw"
+  },
+  "poll_limits": {
+    "max_expiration": 31536000,
+    "max_option_chars": 200,
+    "max_options": 20,
+    "min_expiration": 0
+  },
+  "registrations": false,
+  "stats": {
+    "domain_count": 14557,
+    "status_count": 284658,
+    "user_count": 72
+  },
+  "thumbnail": "https://ihatebeinga.live/media/f11ac1c7cf9bff14c06e32b004bd74100cb57bcfef78881794998e779403f1e1.png",
+  "title": "Test Instance",
+  "upload_limit": 100000000,
+  "uri": "http://localhost:8080/",
+  "urls": {
+    "streaming_api": "ws://localhost:8080"
+  },
+  "version": "2.7.2 (compatible; Akkoma 3.4.0-118-g41241bbb-develop)"
+}

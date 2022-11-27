@@ -1,14 +1,16 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 const path = require('path')
 let settings = {}
+const localSettings = process.env.CONFIG || './local.json'
+console.log('Using settings', localSettings)
 try {
-  settings = require('./local.json')
+  settings = require(localSettings)
   if (settings.target && settings.target.endsWith('/')) {
     // replacing trailing slash since it can conflict with some apis
     // and that's how actual BE reports its url
     settings.target = settings.target.replace(/\/$/, '')
   }
-  console.log('Using local dev server settings (/config/local.json):')
+  console.log('Using local dev server settings:')
   console.log(JSON.stringify(settings, null, 2))
 } catch (e) {
   console.log('Local dev server settings not found (/config/local.json)')

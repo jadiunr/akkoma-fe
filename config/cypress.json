@@ -1,0 +1,4 @@
+{
+  "target": "http://cypress.example.com",
+  "staticConfigPreference": false
+}

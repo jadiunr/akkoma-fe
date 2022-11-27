@@ -1,0 +1,26 @@
+{
+  "masto_fe": {
+    "showInstanceSpecificPanel": true
+  },
+  "pleroma_fe": {
+    "alwaysShowSubjectInput": true,
+    "background": "/images/5cm.jpg",
+    "collapseMessageWithSubject": true,
+    "formattingOptionsEnabled": true,
+    "hidePostStats": false,
+    "hideSiteFavicon": true,
+    "hideUserStats": true,
+    "logo": "/static/logo.png",
+    "logoMask": false,
+    "redirectRootLogin": "/main/friends",
+    "redirectRootNoLogin": "/main/public",
+    "renderMisskeyMarkdown": true,
+    "scopeCopy": true,
+    "scopeOptionsEnabled": true,
+    "showInstanceSpecificPanel": true,
+    "showNavShortcuts": false,
+    "showPanelNavShortcuts": true,
+    "subjectLineBehavior": "email",
+    "theme": "ihatebeingalive"
+  }
+}

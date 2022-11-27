@@ -31,13 +31,15 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 var hotMiddleware = require('webpack-hot-middleware')(compiler)
 
 // proxy api requests
-Object.keys(proxyTable).forEach(function (context) {
-  var options = proxyTable[context]
-  if (typeof options === 'string') {
-    options = { target: options }
-  }
-  app.use(proxyMiddleware(context, options))
-})
+if (!process.env.NO_DEV_PROXY) {
+  Object.keys(proxyTable).forEach(function (context) {
+    var options = proxyTable[context]
+    if (typeof options === 'string') {
+      options = { target: options }
+    }
+    app.use(proxyMiddleware(context, options))
+  })
+}
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

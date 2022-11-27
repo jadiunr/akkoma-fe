@@ -21,7 +21,7 @@ const BasicUserCard = {
     toggleUserExpanded () {
       this.userExpanded = !this.userExpanded
     },
-    userProfileLink (user) {
+    userProfileLink(user) {
       return generateProfileLink(user.id, user.screen_name, this.$store.state.instance.restrictedNicknames)
     }
   }

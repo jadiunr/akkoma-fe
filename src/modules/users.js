@@ -562,6 +562,9 @@ const users = {
               commit('addNewUsers', [user])
 
               store.dispatch('fetchEmoji')
+              store.dispatch('fetchMutes')
+              store.dispatch('startFetchingAnnouncements')
+              store.dispatch('startFetchingReports')
 
               getNotificationPermission()
                 .then(permission => commit('setNotificationPermission', permission))

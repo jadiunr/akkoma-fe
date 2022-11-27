@@ -1,0 +1,198 @@
+{
+  "acct": "test",
+  "akkoma": {
+    "instance": {
+      "favicon": "favicon.png",
+      "name": "cypress.example.com",
+      "nodeinfo": {
+        "metadata": {
+          "accountActivationRequired": false,
+          "features": [
+            "pleroma_api",
+            "akkoma_api",
+            "mastodon_api",
+            "mastodon_api_streaming",
+            "polls",
+            "v2_suggestions",
+            "pleroma_explicit_addressing",
+            "shareable_emoji_packs",
+            "multifetch",
+            "pleroma:api/v1/notifications:include_types_filter",
+            "editing",
+            "media_proxy",
+            "pleroma_emoji_reactions",
+            "exposable_reactions",
+            "profile_directory",
+            "akkoma:machine_translation",
+            "custom_emoji_reactions",
+            "pleroma:get:main/ostatus"
+          ],
+          "federation": {
+            "enabled": true,
+            "exclusions": true
+          },
+          "fieldsLimits": {
+            "maxFields": 10,
+            "maxRemoteFields": 20,
+            "nameLength": 512,
+            "valueLength": 2048
+          },
+          "invitesEnabled": true,
+          "localBubbleInstances": [
+            "bubble.exaple.com"
+          ],
+          "mailerEnabled": true,
+          "nodeDescription": "An Akkoma Instance",
+          "nodeName": "Test Instance",
+          "pollLimits": {
+            "max_expiration": 31536000,
+            "max_option_chars": 200,
+            "max_options": 20,
+            "min_expiration": 0
+          },
+          "postFormats": [
+            "text/plain",
+            "text/html",
+            "text/markdown",
+            "text/bbcode",
+            "text/x.misskeymarkdown"
+          ],
+          "private": false,
+          "restrictedNicknames": [
+            ".well-known",
+            "~",
+            "about",
+            "activities",
+            "api",
+            "auth",
+            "check_password",
+            "dev",
+            "friend-requests",
+            "inbox",
+            "internal",
+            "main",
+            "media",
+            "nodeinfo",
+            "notice",
+            "oauth",
+            "objects",
+            "ostatus_subscribe",
+            "pleroma",
+            "proxy",
+            "push",
+            "registration",
+            "relay",
+            "settings",
+            "status",
+            "tag",
+            "user-search",
+            "user_exists",
+            "users",
+            "web",
+            "verify_credentials",
+            "update_credentials",
+            "relationships",
+            "search",
+            "confirmation_resend",
+            "mfa"
+          ],
+          "skipThreadContainment": true,
+          "staffAccounts": [
+            "http://cypress.example.com/users/test"
+          ],
+          "suggestions": {
+            "enabled": false
+          },
+          "uploadLimits": {
+            "avatar": 2000000,
+            "background": 4000000,
+            "banner": 4000000,
+            "general": 100000000
+          }
+        },
+        "openRegistrations": false,
+        "protocols": [
+          "activitypub"
+        ],
+        "services": {
+          "inbound": [],
+          "outbound": []
+        },
+        "software": {
+          "name": "akkoma",
+          "version": "3.4.0-136-g98d4d691-develop"
+        },
+        "usage": {
+          "localPosts": 284709,
+          "users": {
+            "total": 72
+          }
+        },
+        "version": "2.0"
+      }
+    }
+  },
+  "avatar": "3ba406a0f1ce44b2379029f322cacb77b78951f515495739bd65bbfcee297931.jpg",
+  "avatar_static": "3ba406a0f1ce44b2379029f322cacb77b78951f515495739bd65bbfcee297931.jpg",
+  "bot": false,
+  "created_at": "2018-11-27T18:04:50.000Z",
+  "display_name": "Test User",
+  "emojis": [
+  ],
+  "fields": [
+  ],
+  "follow_requests_count": 1,
+  "followers_count": 1,
+  "following_count": 1,
+  "fqn": "test@cypress.example.com",
+  "header": "header.gif",
+  "header_static": "header.gif",
+  "id": "1",
+  "last_status_at": "2022-11-27T15:17:03",
+  "locked": true,
+  "note": "A test user",
+"pleroma": {
+    "allow_following_move": true,
+    "also_known_as": [],
+    "ap_id": "http://cypress.example.com/users/example",
+    "background_image": "something.jpg",
+    "deactivated": false,
+    "email": "somewhere@example.com",
+    "favicon": "/favicon.png",
+    "hide_favorites": true,
+    "hide_followers": true,
+    "hide_followers_count": false,
+    "hide_follows": true,
+    "hide_follows_count": false,
+    "is_admin": true,
+    "is_confirmed": true,
+    "is_moderator": true,
+    "is_suggested": false,
+    "notification_settings": {
+      "block_from_strangers": false,
+      "hide_notification_contents": false
+    },
+    "relationship": {},
+    "settings_store": {},
+    "skip_thread_containment": false,
+    "tags": [],
+    "unread_conversation_count": 2108,
+    "unread_notifications_count": 18
+  },
+  "source": {
+    "fields": [
+    ],
+    "note": "Test user",
+    "pleroma": {
+      "actor_type": "Person",
+      "discoverable": true,
+      "no_rich_text": false,
+      "show_role": true
+    },
+    "privacy": "private",
+    "sensitive": false
+  },
+  "statuses_count": 10166,
+  "url": "http://cypress.example.com/users/test",
+  "username": "test"
+}

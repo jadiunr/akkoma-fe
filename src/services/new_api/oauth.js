@@ -77,6 +77,9 @@ const getToken = ({ clientId, clientSecret, instance, code }) => {
     body: form
   })
     .then((data) => data.json())
+    .catch((e) => {
+      console.error(e);
+    });
 }
 
 export const getClientToken = ({ clientId, clientSecret, instance }) => {
