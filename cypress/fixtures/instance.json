@@ -122,7 +122,7 @@
     "status_count": 284658,
     "user_count": 72
   },
-  "thumbnail": "https://ihatebeinga.live/media/f11ac1c7cf9bff14c06e32b004bd74100cb57bcfef78881794998e779403f1e1.png",
+  "thumbnail": "thumb.png",
   "title": "Test Instance",
   "upload_limit": 100000000,
   "uri": "http://localhost:8080/",
