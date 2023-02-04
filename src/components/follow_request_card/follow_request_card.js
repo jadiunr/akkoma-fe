@@ -43,6 +43,7 @@ const FollowRequestCard = {
     doApprove () {
       this.$store.state.api.backendInteractor.approveUser({ id: this.user.id })
       this.$store.dispatch('removeFollowRequest', this.user)
+      this.$store.dispatch('decrementFollowRequestsCount')
 
       const notifId = this.findFollowRequestNotificationId()
       this.$store.dispatch('markSingleNotificationAsSeen', { id: notifId })
@@ -66,6 +67,7 @@ const FollowRequestCard = {
       this.$store.state.api.backendInteractor.denyUser({ id: this.user.id })
         .then(() => {
           this.$store.dispatch('dismissNotificationLocal', { id: notifId })
+          this.$store.dispatch('decrementFollowRequestsCount')
           this.$store.dispatch('removeFollowRequest', this.user)
         })
       this.hideDenyConfirmDialog()
