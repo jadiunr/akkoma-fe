@@ -54,7 +54,6 @@ const NavPanel = {
     }),
     ...mapGetters(['unreadAnnouncementCount']),
     followRequestCount () {
-      console.log({...this.$store.state.users.currentUser});
       return this.$store.state.users.currentUser.follow_requests_count
     }
   }

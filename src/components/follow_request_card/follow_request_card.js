@@ -84,7 +84,6 @@ const FollowRequestCard = {
       return this.mergedConfig.modalOnDenyFollow
     },
     show () {
-      console.log("SHOW", this.$store.state.api.followRequests);
       const notifId = this.$store.state.api.followRequests.find(req => req.id === this.user.id)
 
       return notifId !== undefined
