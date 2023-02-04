@@ -1608,7 +1608,7 @@ const getFollowRequests = ({ credentials, pagination: savedPagination }) => {
   }).then((data) => {
     return {
       pagination,
-      data
+      data: data.map(parseUser)
     }
   });
 }
