@@ -1,4 +1,5 @@
 import ConfirmModal from '../confirm_modal/confirm_modal.vue'
+import ScopeSelector from '../scope_selector/scope_selector.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faRetweet } from '@fortawesome/free-solid-svg-icons'
 
@@ -7,12 +8,14 @@ library.add(faRetweet)
 const RetweetButton = {
   props: ['status', 'loggedIn', 'visibility'],
   components: {
-    ConfirmModal
+    ConfirmModal,
+    ScopeSelector
   },
   data () {
     return {
       animated: false,
-      showingConfirmDialog: false
+      showingConfirmDialog: false,
+      retweetVisibility: this.status.visibility
     }
   },
   methods: {
@@ -25,7 +28,7 @@ const RetweetButton = {
     },
     doRetweet () {
       if (!this.status.repeated) {
-        this.$store.dispatch('retweet', { id: this.status.id })
+        this.$store.dispatch('retweet', { status: this.status, visibility: this.retweetVisibility })
       } else {
         this.$store.dispatch('unretweet', { id: this.status.id })
       }
@@ -40,7 +43,10 @@ const RetweetButton = {
     },
     hideConfirmDialog () {
       this.showingConfirmDialog = false
-    }
+    },
+    changeVis (visibility) {
+      this.retweetVisibility = visibility
+    },
   },
   computed: {
     isOwn () {
@@ -54,7 +60,10 @@ const RetweetButton = {
     },
     remoteInteractionLink () {
       return this.$store.getters.remoteInteractionLink({ statusId: this.status.id })
-    }
+    },
+    retweetDefaultScope () {
+      return this.status.visibility
+    },
   }
 }
 

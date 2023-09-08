@@ -49,6 +49,11 @@
         @cancelled="hideConfirmDialog"
       >
         {{ $t('status.repeat_confirm') }}
+        <scope-selector
+          :user-default="retweetDefaultScope"
+          :initial-scope="status.visibility"
+          :on-scope-change="changeVis"
+        />
       </confirm-modal>
     </teleport>
   </div>
