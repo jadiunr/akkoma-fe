@@ -217,6 +217,11 @@ const Status = {
     retweeterProfileLink () { return this.generateUserProfileLink(this.statusoid.user.id, this.statusoid.user.screen_name) },
     status () {
       if (this.retweet) {
+        if (this.statusoid.visibility === 'private') {
+          let private_retweeted_status = JSON.parse(JSON.stringify(this.statusoid.retweeted_status))
+          private_retweeted_status.visibility = 'private'
+          return private_retweeted_status
+        }
         return this.statusoid.retweeted_status
       } else {
         return this.statusoid
