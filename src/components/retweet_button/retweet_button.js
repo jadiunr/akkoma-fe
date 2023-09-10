@@ -15,7 +15,7 @@ const RetweetButton = {
     return {
       animated: false,
       showingConfirmDialog: false,
-      retweetVisibility: this.status.visibility
+      retweetVisibility: this.$store.state.users.currentUser.default_scope
     }
   },
   methods: {
@@ -61,8 +61,8 @@ const RetweetButton = {
     remoteInteractionLink () {
       return this.$store.getters.remoteInteractionLink({ statusId: this.status.id })
     },
-    retweetDefaultScope () {
-      return this.status.visibility
+    userDefaultScope () {
+      return this.$store.state.users.currentUser.default_scope
     },
   }
 }

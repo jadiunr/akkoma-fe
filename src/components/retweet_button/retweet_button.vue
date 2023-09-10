@@ -50,8 +50,8 @@
       >
         {{ $t('status.repeat_confirm') }}
         <scope-selector
-          :user-default="retweetDefaultScope"
-          :initial-scope="status.visibility"
+          :user-default="userDefaultScope"
+          :initial-scope="userDefaultScope"
           :on-scope-change="changeVis"
         />
       </confirm-modal>
