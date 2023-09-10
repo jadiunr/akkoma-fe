@@ -663,10 +663,10 @@ const statuses = {
       return rootState.api.backendInteractor.unmuteConversation({ id: statusId })
         .then((status) => commit('setMutedStatus', status))
     },
-    retweet ({ rootState, commit }, { status, visibility }) {
+    retweet ({ rootState, commit }, status) {
       // Optimistic retweeting...
       commit('setRetweeted', { status, value: true })
-      rootState.api.backendInteractor.retweet({ id: status.id, visibility })
+      rootState.api.backendInteractor.retweet({ id: status.id, visibility: status.visibility })
         .then(status => commit('setRetweetedConfirm', { status: status.retweeted_status, user: rootState.users.currentUser }))
     },
     unretweet ({ rootState, commit }, status) {

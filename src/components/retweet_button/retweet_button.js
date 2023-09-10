@@ -28,7 +28,7 @@ const RetweetButton = {
     },
     doRetweet () {
       if (!this.status.repeated) {
-        this.$store.dispatch('retweet', { status: this.status, visibility: this.retweetVisibility })
+        this.$store.dispatch('retweet', { id: this.status.id, visibility: this.retweetVisibility })
       } else {
         this.$store.dispatch('unretweet', { id: this.status.id })
       }
