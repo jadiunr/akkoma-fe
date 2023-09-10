@@ -19,7 +19,7 @@ import MentionLink from 'src/components/mention_link/mention_link.vue'
 import generateProfileLink from 'src/services/user_profile_link_generator/user_profile_link_generator'
 import { highlightClass, highlightStyle } from '../../services/user_highlighter/user_highlighter.js'
 import { muteWordHits } from '../../services/status_parser/status_parser.js'
-import { unescape, uniqBy } from 'lodash'
+import { unescape, uniqBy, cloneDeep } from 'lodash'
 import StillImage from '../still-image/still-image.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -217,12 +217,9 @@ const Status = {
     retweeterProfileLink () { return this.generateUserProfileLink(this.statusoid.user.id, this.statusoid.user.screen_name) },
     status () {
       if (this.retweet) {
-        if (this.statusoid.visibility === 'private') {
-          let private_retweeted_status = JSON.parse(JSON.stringify(this.statusoid.retweeted_status))
-          private_retweeted_status.visibility = 'private'
-          return private_retweeted_status
-        }
-        return this.statusoid.retweeted_status
+        let retweetedStatusClone = cloneDeep(this.statusoid.retweeted_status)
+        retweetedStatusClone.visibility = this.statusoid.visibility
+        return retweetedStatusClone
       } else {
         return this.statusoid
       }
