@@ -138,5 +138,5 @@
     <slot v-if="!hideSubjectStatus" />
   </div>
 </template>
-<script src="./status_body.js" ></script>
+<script src="./status_body.js"></script>
 <style lang="scss" src="./status_body.scss" />

@@ -21,7 +21,7 @@
         :refresh="true"
         :get-key="i => i"
       >
-        <template v-slot:header="{selected}">
+        <template #header="{selected}">
           <div class="bulk-actions">
             <ProgressButton
               v-if="selected.length > 0"
@@ -29,7 +29,7 @@
               :click="() => blockUsers(selected)"
             >
               {{ $t('user_card.block') }}
-              <template v-slot:progress>
+              <template #progress>
                 {{ $t('user_card.block_progress') }}
               </template>
             </ProgressButton>
@@ -39,16 +39,16 @@
               :click="() => unblockUsers(selected)"
             >
               {{ $t('user_card.unblock') }}
-              <template v-slot:progress>
+              <template #progress>
                 {{ $t('user_card.unblock_progress') }}
               </template>
             </ProgressButton>
           </div>
         </template>
-        <template v-slot:item="{item}">
+        <template #item="{item}">
           <BlockCard :user-id="item" />
         </template>
-        <template v-slot:empty>
+        <template #empty>
           {{ $t('settings.no_blocks') }}
         </template>
       </BlockList>
@@ -74,7 +74,7 @@
             :refresh="true"
             :get-key="i => i"
           >
-            <template v-slot:header="{selected}">
+            <template #header="{selected}">
               <div class="bulk-actions">
                 <ProgressButton
                   v-if="selected.length > 0"
@@ -82,7 +82,7 @@
                   :click="() => muteUsers(selected)"
                 >
                   {{ $t('user_card.mute') }}
-                  <template v-slot:progress>
+                  <template #progress>
                     {{ $t('user_card.mute_progress') }}
                   </template>
                 </ProgressButton>
@@ -92,16 +92,16 @@
                   :click="() => unmuteUsers(selected)"
                 >
                   {{ $t('user_card.unmute') }}
-                  <template v-slot:progress>
+                  <template #progress>
                     {{ $t('user_card.unmute_progress') }}
                   </template>
                 </ProgressButton>
               </div>
             </template>
-            <template v-slot:item="{item}">
+            <template #item="{item}">
               <MuteCard :user-id="item" />
             </template>
-            <template v-slot:empty>
+            <template #empty>
               {{ $t('settings.no_mutes') }}
             </template>
           </MuteList>
@@ -125,7 +125,7 @@
             :refresh="true"
             :get-key="i => i"
           >
-            <template v-slot:header="{selected}">
+            <template #header="{selected}">
               <div class="bulk-actions">
                 <ProgressButton
                   v-if="selected.length > 0"
@@ -133,16 +133,16 @@
                   :click="() => unmuteDomains(selected)"
                 >
                   {{ $t('domain_mute_card.unmute') }}
-                  <template v-slot:progress>
+                  <template #progress>
                     {{ $t('domain_mute_card.unmute_progress') }}
                   </template>
                 </ProgressButton>
               </div>
             </template>
-            <template v-slot:item="{item}">
+            <template #item="{item}">
               <DomainMuteCard :domain="item" />
             </template>
-            <template v-slot:empty>
+            <template #empty>
               {{ $t('settings.no_mutes') }}
             </template>
           </DomainMuteList>

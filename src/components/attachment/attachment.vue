@@ -179,8 +179,8 @@
       </a>
 
       <component
-        :is="videoTag"
         v-if="type === 'video' && !hidden"
+        :is="videoTag"
         class="video-container"
         :class="{ 'button-unstyled': 'isModal' }"
         :href="attachment.url"

@@ -134,7 +134,7 @@
         :offset="{ y: 5 }"
         remove-padding
       >
-        <template v-slot:trigger>
+        <template #trigger>
           <button
             class="btn button-default"
             :disabled="!tagPolicyEnabled"
@@ -147,7 +147,7 @@
             />
           </button>
         </template>
-        <template v-slot:content="{close}">
+        <template #content="{close}">
           <div
             class="dropdown-menu"
             :disabled="!tagPolicyEnabled"
